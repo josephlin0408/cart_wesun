@@ -6,12 +6,17 @@
 <div id="container">
 	<%= render partial: 'themes/common/menu' %>
 	<!-- content -->
+	<div class="content">
+		<div class="inner-content">
+			<p class="text-right">login / register</p>
+		</div>
+	</div>
 	<div id="content">
 		<div class="inner-content">
 			<div class="portfolio-container">
-			
 				<div class="portfolio-box">
 				<!-- 商品區塊 -->
+				<% (1..10).each do %>
 					<div class="project-post">
 						<div class="galery-box">
 							<a href="/assets/upload/1.jpg" class="zoom">
@@ -22,8 +27,10 @@
 						<div class="content-box">
 							<h2><a href="#">4T全合成</a></h2>
 							<p>最佳使用時機：大約在冬季</p>
+							<p>適用車型：KYM125</p>
 						</div>
 					</div>
+				<% end %>
 				<!-- 商品區塊end -->
 				</div>					
 			</div>
