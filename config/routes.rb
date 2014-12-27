@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # 所有前端視覺會用到的就放在themes中, 比較好管理.
   scope module: 'themes', :as => 'themes' do
     root 'pages#index'

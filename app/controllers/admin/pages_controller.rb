@@ -1,3 +1,3 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < Admin::BaseController
 	def index; end
 end

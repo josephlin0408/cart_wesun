@@ -1,17 +1,23 @@
 <%= content_for :import_theme do %>
 	<%= render partial: 'themes/common/import_theme' %>
 <% end %>
-
 <!-- Container -->
 <div id="container">
 	<%= render partial: 'themes/common/menu' %>
 	<!-- content -->
-	<div class="content">
-		<div class="inner-content">
-			<p class="text-right">login / register</p>
-		</div>
-	</div>
 	<div id="content">
+		<div class="inner-content">
+			<% if user_signed_in? %>
+				<p class="text-right">isLogin! /
+				<%= link_to "登出", destroy_user_session_path, method: :delete %> 
+				</p>
+			<% else %>
+				<p class="text-right">
+				<%= link_to "登入", new_user_session_path %>
+				</p>
+			<% end %>
+		</div>
+
 		<div class="inner-content">
 			<div class="portfolio-container">
 				<div class="portfolio-box">
